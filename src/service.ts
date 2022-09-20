@@ -68,7 +68,7 @@ export default class Service {
       const name = year + ' likes'
       const description = `tracks from ${year} to help a goated-with-the-sauce white boy bust it down sexual style`
       const tracks: ISpotifyLikedTrack[] = require(this.chunkJsonsDir + f)
-      tracks.sort((a, z) => new Date(a.added_at).getTime() - new Date(z.added_at).getTime())
+      tracks.sort((a, z) => new Date(z.added_at).getTime() - new Date(a.added_at).getTime())
       const uris = tracks.map(t => t.track.uri)
       const y1 = await this.confirm('  > create playlist ' + name + '? [y/n]')
       if (y1) {
