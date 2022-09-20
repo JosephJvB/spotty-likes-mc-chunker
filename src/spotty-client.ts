@@ -1,16 +1,62 @@
 import axios, { AxiosResponse } from 'axios'
-import { ISpotifyPaginatedResponse, ISpotifyPlaylist, ISpotifyRefreshResponse, ISpotifyTrack } from 'jvb-spotty-models'
+import { ISpotifyPaginatedResponse, ISpotifyPlaylist, ISpotifyRefreshResponse, ISpotifyTokenResponse, ISpotifyTrack } from 'jvb-spotty-models'
+import { ISpotifyLikedTrack } from './models'
 
 export default class SpottyClient {
-  accessToken: string
+  private accessToken: string
+  tokenJson: ISpotifyTokenResponse
   userId: string
   constructor() {
     this.userId = process.env.SpotifyUserId
+    axios.interceptors.response.use(
+      r => r,
+      error => {
+        if (error.isAxiosError) {
+          console.error(error.toJSON())
+          console.error('data', error.response.data)
+          console.error('code', error.response.status)
+        } else {
+          console.error(error)
+        }
+        console.error('Axios request failed')
+        process.exit()
+      },
+    )
   }
 
-  async removeItemsFromPlaylist() {}
+  async removeLikedTracks(trackIds: string[]) {
+    console.log('SpottyClient.removeLikedTracks')
+    for (let i = 0; i < trackIds.length; i += 50) {
+      const b = trackIds.slice(i, i + 50)
+      await axios({
+        method: 'delete',
+        url: `https://api.spotify.com/v1/me/tracks`,
+        headers: {
+          Authorization: 'Bearer ' + this.accessToken
+        },
+        data: {
+          ids: b
+        }
+      })
+    }
+  }
 
-  async addItemsToPlaylist() {}
+  async addTracksToPlaylist(playlistId: string, trackUris: string[]) {
+    console.log('SpottyClient.addTracksToPlaylist')
+    for (let i = 0; i < trackUris.length; i += 100) {
+      const b = trackUris.slice(i, i + 100)
+      await axios({
+        method: 'post',
+        url: `https://api.spotify.com/v1/playlists/${playlistId}/tracks`,
+        headers: {
+          Authorization: 'Bearer ' + this.accessToken
+        },
+        data: {
+          uris: b
+        }
+      })
+    }
+  }
 
   async createPlaylist(name: string, description: string): Promise<ISpotifyPlaylist> {
     console.log('SpottyClient.createPlaylist')
@@ -28,11 +74,28 @@ export default class SpottyClient {
     return r.data
   }
 
+  async getLikedTracks(): Promise<ISpotifyLikedTrack[]> {
+    console.log('SpottyClient.getLikedTracks')
+    const tracks: ISpotifyLikedTrack[] = []
+    let url = `https://api.spotify.com/v1/me/tracks`
+    do {
+      console.log('  >', url)
+      const r: AxiosResponse<ISpotifyPaginatedResponse<ISpotifyLikedTrack>> = await axios({
+        url,
+        headers: {
+          Authorization: 'Bearer ' + this.accessToken
+        },
+      })
+      url = r.data.next
+      tracks.push(...r.data.items)
+    } while (url)
+    return tracks
+  }
+
   async getAllPlaylistTracks(playlistId: string): Promise<ISpotifyTrack[]> {
     console.log('SpottyClient.getAllPlaylistTracks')
-    throw new Error('WIP')
     const tracks: ISpotifyTrack[] = []
-    let url = 'https://api.spotify.com/v1/me/playlists'
+    let url = `https://api.spotify.com/v1/playlists/${playlistId}/tracks`
     do {
       console.log('  >', url)
       const r: AxiosResponse<ISpotifyPaginatedResponse<ISpotifyTrack>> = await axios({
@@ -47,7 +110,7 @@ export default class SpottyClient {
     return tracks
   }
 
-  async getAllUsersPlaylists(): Promise<ISpotifyPlaylist[]> {
+  private async getAllUsersPlaylists(): Promise<ISpotifyPlaylist[]> {
     console.log('SpottyClient.getAllUsersPlaylists')
     const playlists: ISpotifyPlaylist[] = []
     let url = 'https://api.spotify.com/v1/me/playlists'
@@ -72,11 +135,25 @@ export default class SpottyClient {
       url: 'https://accounts.spotify.com/api/token',
       params: {
         grant_type: 'refresh_token',
-        refresh_token: process.env.RefreshToken
+        refresh_token: this.tokenJson.refresh_token
       },
       headers: this.basicAuthHeaders
     })
     this.accessToken = r.data.access_token
+  }
+  async submitCode(spotifyCode: string) {
+    console.log('SpottyClient.submitCode:', spotifyCode)
+    const r = await axios({
+      method: 'post',
+      url: 'https://accounts.spotify.com/api/token',
+      params: {
+        code: spotifyCode,
+        grant_type: 'authorization_code',
+        redirect_uri: 'http://localhost:3000'
+      },
+      headers: this.basicAuthHeaders
+    })
+    return r.data
   }
 
   get basicAuth() {
@@ -89,5 +166,24 @@ export default class SpottyClient {
       'Content-Type': 'application/x-www-form-urlencoded',
       Authorization: `Basic ${this.basicAuth}`
     }
+  }
+  get startUrl() {
+    return 'https://accounts.spotify.com/authorize?' + new URLSearchParams({
+      response_type: 'code',
+      client_id: process.env.SpotifyClientId,
+      scope: [
+        'user-read-private',
+        'user-read-email',
+        'user-top-read',
+        'user-read-recently-played',
+        'playlist-read-private',
+        'playlist-read-collaborative',
+        'playlist-modify-private',
+        'playlist-modify-public',
+        'user-library-modify',
+        'user-library-read',
+      ].join(' '),
+      redirect_uri: 'http://localhost:3000',
+    })
   }
 }

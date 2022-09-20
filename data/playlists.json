@@ -1,0 +1,288 @@
+[
+  {
+    "collaborative": false,
+    "description": "",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/1YDYxir6fMUNPP4NS8i677"
+    },
+    "href": "https://api.spotify.com/v1/playlists/1YDYxir6fMUNPP4NS8i677",
+    "id": "1YDYxir6fMUNPP4NS8i677",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://mosaic.scdn.co/640/ab67616d0000b2733ae1cd6f1fd1d66bc39ef5daab67616d0000b2734320143642ebfe5276d25ec5ab67616d0000b27380c6db47e75d58e25b72f2caab67616d0000b273c2287270ed624c3195a5d61c",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://mosaic.scdn.co/300/ab67616d0000b2733ae1cd6f1fd1d66bc39ef5daab67616d0000b2734320143642ebfe5276d25ec5ab67616d0000b27380c6db47e75d58e25b72f2caab67616d0000b273c2287270ed624c3195a5d61c",
+        "width": 300
+      },
+      {
+        "height": 60,
+        "url": "https://mosaic.scdn.co/60/ab67616d0000b2733ae1cd6f1fd1d66bc39ef5daab67616d0000b2734320143642ebfe5276d25ec5ab67616d0000b27380c6db47e75d58e25b72f2caab67616d0000b273c2287270ed624c3195a5d61c",
+        "width": 60
+      }
+    ],
+    "name": "The gizziest ",
+    "owner": {
+      "display_name": "Joe",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/xnmacgqaaa6a1xi7uy2k1fe7w"
+      },
+      "href": "https://api.spotify.com/v1/users/xnmacgqaaa6a1xi7uy2k1fe7w",
+      "id": "xnmacgqaaa6a1xi7uy2k1fe7w",
+      "type": "user",
+      "uri": "spotify:user:xnmacgqaaa6a1xi7uy2k1fe7w"
+    },
+    "primary_color": null,
+    "public": true,
+    "snapshot_id": "MTAsN2MxYmJmNTZjMjZhNjg5YTg2YjhmNGY2NGQ1NjdlNzcwMTVhODE0OA==",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/1YDYxir6fMUNPP4NS8i677/tracks",
+      "total": 9
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:1YDYxir6fMUNPP4NS8i677"
+  },
+  {
+    "collaborative": false,
+    "description": "",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/5GXCPEDZSJFJCdqp3jTqIj"
+    },
+    "href": "https://api.spotify.com/v1/playlists/5GXCPEDZSJFJCdqp3jTqIj",
+    "id": "5GXCPEDZSJFJCdqp3jTqIj",
+    "images": [
+      {
+        "height": null,
+        "url": "https://i.scdn.co/image/ab67706c0000bebb4fa37ac89eea84e65e782252",
+        "width": null
+      }
+    ],
+    "name": "White people be driving",
+    "owner": {
+      "display_name": "Joe",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/xnmacgqaaa6a1xi7uy2k1fe7w"
+      },
+      "href": "https://api.spotify.com/v1/users/xnmacgqaaa6a1xi7uy2k1fe7w",
+      "id": "xnmacgqaaa6a1xi7uy2k1fe7w",
+      "type": "user",
+      "uri": "spotify:user:xnmacgqaaa6a1xi7uy2k1fe7w"
+    },
+    "primary_color": null,
+    "public": true,
+    "snapshot_id": "NjUsN2I3M2M2MmNlNmNmOWVlZWVkNTgwNmZmMmFjNWU5NjZkNGE3NDNiNw==",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/5GXCPEDZSJFJCdqp3jTqIj/tracks",
+      "total": 57
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:5GXCPEDZSJFJCdqp3jTqIj"
+  },
+  {
+    "collaborative": false,
+    "description": "",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/6K4XDzgqM2QnA8mX482sRr"
+    },
+    "href": "https://api.spotify.com/v1/playlists/6K4XDzgqM2QnA8mX482sRr",
+    "id": "6K4XDzgqM2QnA8mX482sRr",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://mosaic.scdn.co/640/ab67616d0000b27317625df7e95814d90cbcf3cbab67616d0000b2731a5885a3a072e2a65fb836ceab67616d0000b2734a3311282cd21dde7c8ffd7fab67616d0000b273b542068b23f883e5c04348b6",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://mosaic.scdn.co/300/ab67616d0000b27317625df7e95814d90cbcf3cbab67616d0000b2731a5885a3a072e2a65fb836ceab67616d0000b2734a3311282cd21dde7c8ffd7fab67616d0000b273b542068b23f883e5c04348b6",
+        "width": 300
+      },
+      {
+        "height": 60,
+        "url": "https://mosaic.scdn.co/60/ab67616d0000b27317625df7e95814d90cbcf3cbab67616d0000b2731a5885a3a072e2a65fb836ceab67616d0000b2734a3311282cd21dde7c8ffd7fab67616d0000b273b542068b23f883e5c04348b6",
+        "width": 60
+      }
+    ],
+    "name": "Shoulder shakers",
+    "owner": {
+      "display_name": "Joe",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/xnmacgqaaa6a1xi7uy2k1fe7w"
+      },
+      "href": "https://api.spotify.com/v1/users/xnmacgqaaa6a1xi7uy2k1fe7w",
+      "id": "xnmacgqaaa6a1xi7uy2k1fe7w",
+      "type": "user",
+      "uri": "spotify:user:xnmacgqaaa6a1xi7uy2k1fe7w"
+    },
+    "primary_color": null,
+    "public": true,
+    "snapshot_id": "MjcsOTFlZTdhYjM3ZmM2MGQ2NDg1MzQzZmQ2ODM3NTk2YzIzNWI1OTI5Ng==",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/6K4XDzgqM2QnA8mX482sRr/tracks",
+      "total": 22
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:6K4XDzgqM2QnA8mX482sRr"
+  },
+  {
+    "collaborative": false,
+    "description": "",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/31KIXZpThUhM1jKd4pRCJF"
+    },
+    "href": "https://api.spotify.com/v1/playlists/31KIXZpThUhM1jKd4pRCJF",
+    "id": "31KIXZpThUhM1jKd4pRCJF",
+    "images": [
+      {
+        "height": null,
+        "url": "https://i.scdn.co/image/ab67706c0000bebbc75009e39d7aa3625e5e0859",
+        "width": null
+      }
+    ],
+    "name": "Good Six60 songs",
+    "owner": {
+      "display_name": "Joe",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/xnmacgqaaa6a1xi7uy2k1fe7w"
+      },
+      "href": "https://api.spotify.com/v1/users/xnmacgqaaa6a1xi7uy2k1fe7w",
+      "id": "xnmacgqaaa6a1xi7uy2k1fe7w",
+      "type": "user",
+      "uri": "spotify:user:xnmacgqaaa6a1xi7uy2k1fe7w"
+    },
+    "primary_color": null,
+    "public": true,
+    "snapshot_id": "NCw1YjYxYjBmZjZjOGE5N2M2MTFlYzI0YTc4MTllYWVhZWU1ODMyMzAy",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/31KIXZpThUhM1jKd4pRCJF/tracks",
+      "total": 0
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:31KIXZpThUhM1jKd4pRCJF"
+  },
+  {
+    "collaborative": false,
+    "description": "",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/1yJg13UEjL8BrJQnjP6R9Q"
+    },
+    "href": "https://api.spotify.com/v1/playlists/1yJg13UEjL8BrJQnjP6R9Q",
+    "id": "1yJg13UEjL8BrJQnjP6R9Q",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://mosaic.scdn.co/640/ab67616d0000b2732256ffae4e713df6c4ea4185ab67616d0000b2734123c0f9b6689205d20f350fab67616d0000b2736f15e7146e488cb6c949f33eab67616d0000b273a0a596f342a25f17918ba971",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://mosaic.scdn.co/300/ab67616d0000b2732256ffae4e713df6c4ea4185ab67616d0000b2734123c0f9b6689205d20f350fab67616d0000b2736f15e7146e488cb6c949f33eab67616d0000b273a0a596f342a25f17918ba971",
+        "width": 300
+      },
+      {
+        "height": 60,
+        "url": "https://mosaic.scdn.co/60/ab67616d0000b2732256ffae4e713df6c4ea4185ab67616d0000b2734123c0f9b6689205d20f350fab67616d0000b2736f15e7146e488cb6c949f33eab67616d0000b273a0a596f342a25f17918ba971",
+        "width": 60
+      }
+    ],
+    "name": "uncomfortably energetic",
+    "owner": {
+      "display_name": "Joe",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/xnmacgqaaa6a1xi7uy2k1fe7w"
+      },
+      "href": "https://api.spotify.com/v1/users/xnmacgqaaa6a1xi7uy2k1fe7w",
+      "id": "xnmacgqaaa6a1xi7uy2k1fe7w",
+      "type": "user",
+      "uri": "spotify:user:xnmacgqaaa6a1xi7uy2k1fe7w"
+    },
+    "primary_color": null,
+    "public": true,
+    "snapshot_id": "MjcsZDA5ZDY3NWUyNjRkZTBiMTA0MmVmNWNhMjNhMjRjNmY4ZmY4NmRhZg==",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/1yJg13UEjL8BrJQnjP6R9Q/tracks",
+      "total": 25
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:1yJg13UEjL8BrJQnjP6R9Q"
+  },
+  {
+    "collaborative": false,
+    "description": "YA&#x27;LL LIKE THE BOOM BAP HUH",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/4rg7nhkPHd540FF0j1RNUi"
+    },
+    "href": "https://api.spotify.com/v1/playlists/4rg7nhkPHd540FF0j1RNUi",
+    "id": "4rg7nhkPHd540FF0j1RNUi",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://mosaic.scdn.co/640/ab67616d0000b27335a3131004f9987fe20c7d6fab67616d0000b2735ef886c1fbf220e52799c0b2ab67616d0000b27362544f6a77e0845c7865f684ab67616d0000b2739b19c107109de740bad72df5",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://mosaic.scdn.co/300/ab67616d0000b27335a3131004f9987fe20c7d6fab67616d0000b2735ef886c1fbf220e52799c0b2ab67616d0000b27362544f6a77e0845c7865f684ab67616d0000b2739b19c107109de740bad72df5",
+        "width": 300
+      },
+      {
+        "height": 60,
+        "url": "https://mosaic.scdn.co/60/ab67616d0000b27335a3131004f9987fe20c7d6fab67616d0000b2735ef886c1fbf220e52799c0b2ab67616d0000b27362544f6a77e0845c7865f684ab67616d0000b2739b19c107109de740bad72df5",
+        "width": 60
+      }
+    ],
+    "name": "High School Hip Hop",
+    "owner": {
+      "display_name": "Joe",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/xnmacgqaaa6a1xi7uy2k1fe7w"
+      },
+      "href": "https://api.spotify.com/v1/users/xnmacgqaaa6a1xi7uy2k1fe7w",
+      "id": "xnmacgqaaa6a1xi7uy2k1fe7w",
+      "type": "user",
+      "uri": "spotify:user:xnmacgqaaa6a1xi7uy2k1fe7w"
+    },
+    "primary_color": null,
+    "public": true,
+    "snapshot_id": "MTA4LGMwZjc4MDMyYjQ3NDBhNWZkYWNiNGExN2Y4Mjk1MWRhODdjNTRiNDU=",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/4rg7nhkPHd540FF0j1RNUi/tracks",
+      "total": 62
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:4rg7nhkPHd540FF0j1RNUi"
+  },
+  {
+    "collaborative": false,
+    "description": "",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/36X2Z4FkvDxjbflypQiyCW"
+    },
+    "href": "https://api.spotify.com/v1/playlists/36X2Z4FkvDxjbflypQiyCW",
+    "id": "36X2Z4FkvDxjbflypQiyCW",
+    "images": [],
+    "name": "TEST",
+    "owner": {
+      "display_name": "Joe",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/xnmacgqaaa6a1xi7uy2k1fe7w"
+      },
+      "href": "https://api.spotify.com/v1/users/xnmacgqaaa6a1xi7uy2k1fe7w",
+      "id": "xnmacgqaaa6a1xi7uy2k1fe7w",
+      "type": "user",
+      "uri": "spotify:user:xnmacgqaaa6a1xi7uy2k1fe7w"
+    },
+    "primary_color": null,
+    "public": true,
+    "snapshot_id": "Miw1ZjVjNjViNDY5NjcwMzZmM2NiNjBjNDdlNWNkMjM2YWQ1ODE5ZTNi",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/36X2Z4FkvDxjbflypQiyCW/tracks",
+      "total": 1
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:36X2Z4FkvDxjbflypQiyCW"
+  }
+]
