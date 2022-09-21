@@ -128,6 +128,9 @@ export default class SpottyClient {
   }
 
   async setAccessToken(): Promise<void> {
+    if (this.accessToken) {
+      return
+    }
     console.log('SpottyClient.getAccessToken')
     const r: AxiosResponse<ISpotifyRefreshResponse> = await axios({
       method: 'post',
