@@ -13,7 +13,7 @@ const sss = new Server(s)
 
 void async function() {
   // sss.start()
-  // await ss.saveLikes()
+  // await ss.saveCurrentPlaylists()
   // ss.chunkLikes()
   // await ss.createChunkedPlayists()
   // await ss.rmFromLikes()

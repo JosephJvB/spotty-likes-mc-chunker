@@ -1,6 +1,5 @@
 import axios, { AxiosResponse } from 'axios'
-import { ISpotifyPaginatedResponse, ISpotifyPlaylist, ISpotifyRefreshResponse, ISpotifyTokenResponse, ISpotifyTrack } from 'jvb-spotty-models'
-import { ISpotifyLikedTrack } from './models'
+import { ISpotifyPaginatedResponse, ISpotifyPlaylist, ISpotifyPlaylistTrack, ISpotifyRefreshResponse, ISpotifyTokenResponse, ISpotifyTrack } from 'jvb-spotty-models'
 
 export default class SpottyClient {
   private accessToken: string
@@ -74,13 +73,13 @@ export default class SpottyClient {
     return r.data
   }
 
-  async getLikedTracks(): Promise<ISpotifyLikedTrack[]> {
+  async getLikedTracks(): Promise<ISpotifyPlaylistTrack[]> {
     console.log('SpottyClient.getLikedTracks')
-    const tracks: ISpotifyLikedTrack[] = []
+    const tracks: ISpotifyPlaylistTrack[] = []
     let url = `https://api.spotify.com/v1/me/tracks`
     do {
       console.log('  >', url)
-      const r: AxiosResponse<ISpotifyPaginatedResponse<ISpotifyLikedTrack>> = await axios({
+      const r: AxiosResponse<ISpotifyPaginatedResponse<ISpotifyPlaylistTrack>> = await axios({
         url,
         headers: {
           Authorization: 'Bearer ' + this.accessToken
@@ -110,7 +109,7 @@ export default class SpottyClient {
     return tracks
   }
 
-  private async getAllUsersPlaylists(): Promise<ISpotifyPlaylist[]> {
+  async getAllUsersPlaylists(): Promise<ISpotifyPlaylist[]> {
     console.log('SpottyClient.getAllUsersPlaylists')
     const playlists: ISpotifyPlaylist[] = []
     let url = 'https://api.spotify.com/v1/me/playlists'
