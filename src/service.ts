@@ -4,7 +4,6 @@ import { ISpotifyPlaylist, ISpotifyPlaylistTrack, ISpotifyTokenResponse } from '
 import SpottyClient from "./spotty-client";
 
 export default class Service {
-  private spotty: SpottyClient
   private tokenJsonFile = __dirname + '/../data/secrets/token.json'
   private likesJsonFile = __dirname + '/../data/likes-current.json'
   private playlistsJsonFile = __dirname + '/../data/playlists-all.json'
@@ -12,8 +11,9 @@ export default class Service {
   private chunkJsonsDir = __dirname + '/../data/chunks/'
   private _existingPlaylistMap: { [year: string]: boolean }
 
-  constructor(spotty: SpottyClient) {
-    this.spotty = spotty
+  constructor(
+    private readonly spotty: SpottyClient
+  ) {
     if (!fs.existsSync(this.chunkJsonsDir)) {
       fs.mkdirSync(this.chunkJsonsDir)
     }

@@ -3,11 +3,10 @@ import fs from 'fs'
 import SpottyClient from './spotty-client'
 
 export default class Server {
-  private spotty: SpottyClient
   private tokenJsonFile = __dirname + '/../data/secrets/token.json'
-  constructor(spotty: SpottyClient) {
-    this.spotty = spotty
-  }
+  constructor(
+    private readonly spotty: SpottyClient
+  ) {}
   start() {
     const server = express()
 
