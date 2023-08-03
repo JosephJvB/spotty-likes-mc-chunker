@@ -4,18 +4,18 @@ import Server from './server'
 import Service from './service'
 
 dotenv.config({
-  path: __dirname + '/../.env'
+  path: __dirname + '/../.env',
 })
 
 const s = new SpottyClient()
 const ss = new Service(s)
 const sss = new Server(s)
 
-void async function() {
+void (async function () {
   // sss.start()
-  await s.setAccessToken()
-  await ss.saveCurrentPlaylists()
-  ss.chunkLikes()
-  await ss.createChunkedPlayists()
-  await ss.rmFromLikes()
-}()
+  // await s.setAccessToken()
+  // await ss.saveCurrentPlaylists()
+  // ss.chunkLikes()
+  // await ss.createChunkedPlayists()
+  // await ss.rmFromLikes()
+})()
